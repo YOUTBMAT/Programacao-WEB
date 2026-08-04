@@ -1,23 +1,116 @@
 <!DOCTYPE html>
-<html>
+<html lang="pt-BR">
 <head>
-<title>Clona Cartão</title>
+    <meta charset="UTF-8">
+    <title>Exemplos de Inputs em HTML</title>
 </head>
 <body>
 
-<h1>Bem vindo ao site totalmente seguro</h1>
-<p>Digite suas informações</p>
+    <h1>Guia Completo de Inputs HTML</h1>
+    <p>Abaixo estão todos os tipos de entrada de dados disponíveis:</p>
 
-<h3>Digite seu nome</h3>
-<input type="text" placeholder="Digite seu nome">
-<h3>Digite seu CPF</h3>
-<input type="text" placeholder="Digite seu CPF">
-<h3>Digite o número do seu cartão</h3>
-<input type="number" placeholder="Digite o número do cartão">
-<h3>Digite o número de trás do seu cartão</h3>
-<input type="number" placeholder="Digite o código de verificação">
-<h3>Digite sua senha do cartão</h3>
-<input type="password" placeholder="Digite sua senha">
-<h6>Feito por Mateus Weiss Medeiros</h6>
+    <!-- 1. Button -->
+    <h3>Botão Simples</h3>
+    <input type="button" value="Clique Aqui">
+
+    <!-- 2. Checkbox -->
+    <h3>Caixa de Seleção (Apenas marque)</h3>
+    <input type="checkbox" id="aceito">
+    <label for="aceito">Concordo com os termos</label>
+
+    <!-- 3. Color -->
+    <h3>Escolha uma Cor</h3>
+    <input type="color" value="#ff0000">
+
+    <!-- 4. Date -->
+    <h3>Selecione uma Data</h3>
+    <input type="date">
+
+    <!-- 5. Datetime-local -->
+    <h3>Selecione Data e Hora Local</h3>
+    <input type="datetime-local">   
+
+    <!-- 6. Email -->
+    <h3>Digite seu E-mail</h3>
+    <input type="email" placeholder="seuemail@exemplo.com">
+
+    <!-- 7. File -->
+    <h3>Envie um Arquivo</h3>
+    <input type="file">
+
+    <!-- 8. Hidden -->
+    <h3>Campo Oculto (Invisível no navegador)</h3>
+    <input type="hidden" name="id_usuario" value="12345">
+
+    <!-- 9. Image -->
+    <h3>Botão de Imagem</h3>
+    <input type="image" src="https://via.placeholder.com/100x35?text=Enviar" alt="Botão Enviar">
+
+    <!-- 10. Month -->
+    <h3>Selecione Mês e Ano</h3>
+    <input type="month">
+
+    <!-- 11. Number -->
+    <h3>Digite um Número</h3>
+    <input type="number" placeholder="Digite uma quantidade" min="0" max="100">
+
+    <!-- 12. Password -->
+    <h3>Digite sua Senha</h3>
+    <input type="password" placeholder="Digite sua senha">
+
+    <!-- 13. Radio -->
+    <h3>Selecione uma Opção (Grupo)</h3>
+    <input type="radio" id="opcao1" name="opcao" value="1">
+    <label for="opcao1">Opção 1</label>
+
+    <!-- 14. Range -->
+    <h3>Ajuste o Nível (Barra de Deslizamento)</h3>
+    <input type="range" min="0" max="100" value="50">
+
+    <!-- 15. Reset -->
+    <h3>Limpar Formulário</h3>
+    <input type="reset" value="Resetar Campos">
+
+    <!-- 16. Search -->
+    <h3>Campo de Busca</h3>
+    <input type="search" placeholder="O que você procura?">
+
+    <!-- 17. Submit -->
+    <h3>Enviar Formulário</h3>
+    <input type="submit" value="Enviar Dados">
+
+    <!-- 18. Tel -->
+    <h3>Digite seu Telefone</h3>
+    <input type="tel" placeholder="(00) 00000-0000">
+
+    <!-- 19. Text -->
+    <h3>Digite um Texto Simples</h3>
+    <input type="text" placeholder="Digite seu nome completo">
+
+    <!-- 20. Time -->
+    <h3>Selecione um Horário</h3>
+    <input type="time">
+
+    <!-- 21. Url -->
+    <h3>Digite um Endereço de Site (URL)</h3>
+    <input type="url" placeholder="https://www.exemplo.com">
+
+    <!-- 22. Week -->
+    <h3>Selecione uma Semana do Ano</h3>
+    <input type="week">
+
+    <p></p>
+    <!-- 23. img -->
+    <img width="100" src="https://f4.bcbits.com/img/a2839312287_10.jpg" alt="Joia">
+
+    <ul>
+        <li>Eu</li>
+        <li>Gosto</li>
+        <li>De</li>
+        <li>Listas</li>
+    </ul>
+
+
+    <h6>Feito por Mateus Weiss Medeiros</h6>
 </body>
 </html>
