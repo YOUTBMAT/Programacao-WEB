@@ -1,0 +1,11 @@
+body{
+    background-color:beige;
+}
+
+.titulo{
+    color: rgb(165, 42, 161);
+}
+
+.container {
+    text-align: center;
+}
