@@ -38,6 +38,7 @@ p {
 }
 
 .mapa {
+    position: relative;
     display: grid;
     justify-content: center;
     width: fit-content;
@@ -50,6 +51,25 @@ p {
 
 .mapa img {
     grid-area: 1 / 1;
-    width: 100%;
+    max-width: 100%;
     height: auto;
+    pointer-events: none;
+    transition: filter 0.3s ease;
 }
+
+.greenpath.hovered { filter: drop-shadow(0 0 15px #4ade80); }
+.crystal-peak.hovered { filter: drop-shadow(0 0 15px #f472f5); }
+.city-of-tears.hovered { filter: drop-shadow(0 0 15px #60a5fa); }
+.crossroads.hovered { filter: drop-shadow(0 0 15px #38bdf8); }
+.fungal-wastes.hovered { filter: drop-shadow(0 0 15px #fbbf24); }
+.deepnest.hovered { filter: drop-shadow(0 0 15px #93c5fd); }
+.howling-cliffs.hovered { filter: drop-shadow(0 0 15px #c084fc); }
+.dirtmouth.hovered { filter: drop-shadow(0 0 15px #e2e8f0); }
+.fog-canyon.hovered { filter: drop-shadow(0 0 15px #f472b6); }
+.queens-gardens.hovered { filter: drop-shadow(0 0 15px #34d399); }
+.waterways.hovered { filter: drop-shadow(0 0 15px #2dd4bf); }
+.ancient-basin.hovered { filter: drop-shadow(0 0 15px #cbd5e1); }
+.resting-grounds.hovered { filter: drop-shadow(0 0 15px #f59e0b); }
+.kingdoms-edge.hovered { filter: drop-shadow(0 0 15px #ffffff); }
+.the-hive.hovered { filter: drop-shadow(0 0 15px #eab308); }
+.void.hovered { filter: drop-shadow(0 0 15px #64748b); }

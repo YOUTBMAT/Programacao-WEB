@@ -9,29 +9,105 @@
 </head>
 <body>
     <img src="https://www.image2url.com/r2/default/images/1786552086146-c1ccf89a-7885-43b0-b8f8-6f8d8415d2cb.png" style="display: block; margin: 0 auto;">
-    <div class = "titulo">
+    <div class="titulo">
         <h1>Escolha um local no mapa para descobrir sua história e habitantes</h1>
     </div>
     <h1></h1>
     <div class="mapa">
         <img src="https://i.redd.it/stlj4z26hz8d1.png" class="mapa-base">
 
-        <img src="./estilos/áreas/Dirtmouth.png" class="regiao">
-        <img src="./estilos/áreas/Howling_Cliffs.png" class="regiao">
-        <img src="./estilos/áreas/Forgotten_Crossroads.png" class="regiao">
-        <img src="./estilos/áreas/Greenpath.png" class="regiao">
-        <img src="./estilos/áreas/Fog_Canyon.png" class="regiao">
-        <img src="./estilos/áreas/Fungal_Wastes.png" class="regiao">
-        <img src="./estilos/áreas/Queen's_Gardens.png" class="regiao">
-        <img src="./estilos/áreas/Deepnest.png" class="regiao">
-        <img src="./estilos/áreas/Ancient_Basin.png" class="regiao">
-        <img src="./estilos/áreas/City_of_Tears.png" class="regiao">
-        <img src="./estilos/áreas/Royal_Waterways.png" class="regiao">
-        <img src="./estilos/áreas/Crystal_Peak.png" class="regiao">
-        <img src="./estilos/áreas/Resting_Grounds.png" class="regiao">
-        <img src="./estilos/áreas/Kingdom's_Edge.png" class="regiao">
-        <img src="./estilos/áreas/The_Hive.png" class="regiao">
-        <img src="./estilos/áreas/Void.png" class="regiao">
+        <img src="./estilos/áreas/Dirtmouth.png" class="regiao dirtmouth" data-url="paginas/Dirtmouth.html">
+        <img src="./estilos/áreas/Howling_Cliffs.png" class="regiao howling-cliffs" data-url="paginas/Howling_Cliffs.html">
+        <img src="./estilos/áreas/Forgotten_Crossroads.png" class="regiao crossroads" data-url="paginas/Forgotten_Crossroads.html">
+        <img src="./estilos/áreas/Greenpath.png" class="regiao greenpath" data-url="paginas/Greenpath.html">
+        <img src="./estilos/áreas/Fog_Canyon.png" class="regiao fog-canyon" data-url="paginas/Fog_Canyon.html">
+        <img src="./estilos/áreas/Fungal_Wastes.png" class="regiao fungal-wastes" data-url="paginas/Fungal_Wastes.html">
+        <img src="./estilos/áreas/Queen's_Gardens.png" class="regiao queens-gardens" data-url="paginas/Queen's_Gardens.html">
+        <img src="./estilos/áreas/Deepnest.png" class="regiao deepnest" data-url="paginas/Deepnest.html">
+        <img src="./estilos/áreas/Ancient_Basin.png" class="regiao ancient-basin" data-url="paginas/Ancient_Basin.html">
+        <img src="./estilos/áreas/City_of_Tears.png" class="regiao city-of-tears" data-url="paginas/City_of_Tears.html">
+        <img src="./estilos/áreas/Royal_Waterways.png" class="regiao waterways" data-url="paginas/Royal_Waterways.html">
+        <img src="./estilos/áreas/Crystal_Peak.png" class="regiao crystal-peak" data-url="paginas/Crystal_Peak.html">
+        <img src="./estilos/áreas/Resting_Grounds.png" class="regiao resting-grounds" data-url="paginas/Resting_Grounds.html">
+        <img src="./estilos/áreas/Kingdom's_Edge.png" class="regiao kingdoms-edge" data-url="paginas/Kingdom's_Edge.html">
+        <img src="./estilos/áreas/The_Hive.png" class="regiao the-hive" data-url="paginas/The_Hive.html">
+        <img src="./estilos/áreas/Void.png" class="regiao void" data-url="paginas/Void.html">
     </div>
+
+    <script>
+    document.addEventListener("DOMContentLoaded", () => {
+        const mapaContainer = document.querySelector('.mapa');
+        const regioes = Array.from(document.querySelectorAll('.mapa img.regiao'));
+        let currentHoveredImg = null;
+
+        const canvases = regioes.map(img => {
+            const canvas = document.createElement('canvas');
+            const ctx = canvas.getContext('2d', { willReadFrequently: true });
+
+            function updateCanvas() {
+                if (img.naturalWidth && img.naturalHeight) {
+                    canvas.width = img.naturalWidth;
+                    canvas.height = img.naturalHeight;
+                    ctx.drawImage(img, 0, 0);
+                }
+            }
+
+            if (img.complete) updateCanvas();
+            else img.onload = updateCanvas;
+
+            return { img, canvas, ctx };
+        });
+
+        mapaContainer.addEventListener('mousemove', (e) => {
+            const rect = mapaContainer.getBoundingClientRect();
+            const xRel = (e.clientX - rect.left) / rect.width;
+            const yRel = (e.clientY - rect.top) / rect.height;
+
+            currentHoveredImg = null;
+
+            for (let i = canvases.length - 1; i >= 0; i--) {
+                const { img, canvas, ctx } = canvases[i];
+                if (!canvas.width || !canvas.height) continue;
+
+                const posX = Math.floor(xRel * canvas.width);
+                const posY = Math.floor(yRel * canvas.height);
+
+                if (posX >= 0 && posX < canvas.width && posY >= 0 && posY < canvas.height) {
+                    const pixel = ctx.getImageData(posX, posY, 1, 1).data;
+                    if (pixel[3] > 30) {
+                        currentHoveredImg = img;
+                        break;
+                    }
+                }
+            }
+
+            regioes.forEach(img => {
+                if (img === currentHoveredImg) {
+                    img.classList.add('hovered');
+                } else {
+                    img.classList.remove('hovered');
+                }
+            });
+
+            if (currentHoveredImg) {
+                mapaContainer.style.cursor = 'pointer';
+            } else {
+                mapaContainer.style.cursor = 'default';
+            }
+        });
+
+        mapaContainer.addEventListener('mouseleave', () => {
+            regioes.forEach(img => img.classList.remove('hovered'));
+            currentHoveredImg = null;
+            mapaContainer.style.cursor = 'default';
+        });
+
+        mapaContainer.addEventListener('click', () => {
+            if (currentHoveredImg && currentHoveredImg.dataset.url) {
+                window.location.href = currentHoveredImg.dataset.url;
+            }
+        });
+    });
+    </script>
 </body>
 </html>
