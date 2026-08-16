@@ -1,113 +1,134 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hollow Knight</title>
     <link rel="stylesheet" href="./estilos/styles.css">
-    <link href="https://googleapis.com" rel="stylesheet">
 </head>
 <body>
     <img src="https://www.image2url.com/r2/default/images/1786552086146-c1ccf89a-7885-43b0-b8f8-6f8d8415d2cb.png" style="display: block; margin: 0 auto;">
+    
     <div class="titulo">
         <h1>Escolha um local no mapa para descobrir sua história e habitantes</h1>
     </div>
-    <h1></h1>
+
     <div class="mapa">
         <img src="https://i.redd.it/stlj4z26hz8d1.png" class="mapa-base">
 
-        <img src="./estilos/áreas/Dirtmouth.png" class="regiao dirtmouth" data-url="paginas/Dirtmouth.html">
-        <img src="./estilos/áreas/Howling_Cliffs.png" class="regiao howling-cliffs" data-url="paginas/Howling_Cliffs.html">
-        <img src="./estilos/áreas/Forgotten_Crossroads.png" class="regiao crossroads" data-url="paginas/Forgotten_Crossroads.html">
-        <img src="./estilos/áreas/Greenpath.png" class="regiao greenpath" data-url="paginas/Greenpath.html">
-        <img src="./estilos/áreas/Fog_Canyon.png" class="regiao fog-canyon" data-url="paginas/Fog_Canyon.html">
-        <img src="./estilos/áreas/Fungal_Wastes.png" class="regiao fungal-wastes" data-url="paginas/Fungal_Wastes.html">
-        <img src="./estilos/áreas/Queen's_Gardens.png" class="regiao queens-gardens" data-url="paginas/Queen's_Gardens.html">
-        <img src="./estilos/áreas/Deepnest.png" class="regiao deepnest" data-url="paginas/Deepnest.html">
-        <img src="./estilos/áreas/Ancient_Basin.png" class="regiao ancient-basin" data-url="paginas/Ancient_Basin.html">
-        <img src="./estilos/áreas/City_of_Tears.png" class="regiao city-of-tears" data-url="paginas/City_of_Tears.html">
-        <img src="./estilos/áreas/Royal_Waterways.png" class="regiao waterways" data-url="paginas/Royal_Waterways.html">
-        <img src="./estilos/áreas/Crystal_Peak.png" class="regiao crystal-peak" data-url="paginas/Crystal_Peak.html">
-        <img src="./estilos/áreas/Resting_Grounds.png" class="regiao resting-grounds" data-url="paginas/Resting_Grounds.html">
-        <img src="./estilos/áreas/Kingdom's_Edge.png" class="regiao kingdoms-edge" data-url="paginas/Kingdom's_Edge.html">
-        <img src="./estilos/áreas/The_Hive.png" class="regiao the-hive" data-url="paginas/The_Hive.html">
-        <img src="./estilos/áreas/Void.png" class="regiao void" data-url="paginas/Void.html">
+        <a href="paginas/Dirtmouth.html" class="mapa-link dirtmouth">
+            <img src="./estilos/áreas/Dirtmouth.png" class="regiao">
+        </a>
+        <a href="paginas/Howling_Cliffs.html" class="mapa-link howling-cliffs">
+            <img src="./estilos/áreas/Howling_Cliffs.png" class="regiao">
+        </a>
+        <a href="paginas/Forgotten_Crossroads.html" class="mapa-link crossroads">
+            <img src="./estilos/áreas/Forgotten_Crossroads.png" class="regiao">
+        </a>
+        <a href="paginas/Greenpath.html" class="mapa-link greenpath">
+            <img src="./estilos/áreas/Greenpath.png" class="regiao">
+        </a>
+        <a href="paginas/Fog_Canyon.html" class="mapa-link fog-canyon">
+            <img src="./estilos/áreas/Fog_Canyon.png" class="regiao">
+        </a>
+        <a href="paginas/Fungal_Wastes.html" class="mapa-link fungal-wastes">
+            <img src="./estilos/áreas/Fungal_Wastes.png" class="regiao">
+        </a>
+        <a href="paginas/Queen's_Gardens.html" class="mapa-link queens-gardens">
+            <img src="./estilos/áreas/Queen's_Gardens.png" class="regiao">
+        </a>
+        <a href="paginas/Deepnest.html" class="mapa-link deepnest">
+            <img src="./estilos/áreas/Deepnest.png" class="regiao">
+        </a>
+        <a href="paginas/Ancient_Basin.html" class="mapa-link ancient-basin">
+            <img src="./estilos/áreas/Ancient_Basin.png" class="regiao">
+        </a>
+        <a href="paginas/City_of_Tears.html" class="mapa-link city-of-tears">
+            <img src="./estilos/áreas/City_of_Tears.png" class="regiao">
+        </a>
+        <a href="paginas/Royal_Waterways.html" class="mapa-link waterways">
+            <img src="./estilos/áreas/Royal_Waterways.png" class="regiao">
+        </a>
+        <a href="paginas/Crystal_Peak.html" class="mapa-link crystal-peak">
+            <img src="./estilos/áreas/Crystal_Peak.png" class="regiao">
+        </a>
+        <a href="paginas/Resting_Grounds.html" class="mapa-link resting-grounds">
+            <img src="./estilos/áreas/Resting_Grounds.png" class="regiao">
+        </a>
+        <a href="paginas/Kingdom's_Edge.html" class="mapa-link kingdoms-edge">
+            <img src="./estilos/áreas/Kingdom's_Edge.png" class="regiao">
+        </a>
+        <a href="paginas/The_Hive.html" class="mapa-link the-hive">
+            <img src="./estilos/áreas/The_Hive.png" class="regiao">
+        </a>
+        <a href="paginas/Void.html" class="mapa-link void">
+            <img src="./estilos/áreas/Void.png" class="regiao">
+        </a>
     </div>
 
     <script>
-    document.addEventListener("DOMContentLoaded", () => {
-        const mapaContainer = document.querySelector('.mapa');
-        const regioes = Array.from(document.querySelectorAll('.mapa img.regiao'));
-        let currentHoveredImg = null;
+        document.addEventListener('DOMContentLoaded', () => {
+            const mapa = document.querySelector('.mapa');
+            const links = Array.from(document.querySelectorAll('.mapa-link'));
+            const canvasData = new Map();
 
-        const canvases = regioes.map(img => {
-            const canvas = document.createElement('canvas');
-            const ctx = canvas.getContext('2d', { willReadFrequently: true });
+            // Mapeia cada imagem para um canvas em memória para checar pixels
+            links.forEach(link => {
+                const img = link.querySelector('img');
+                const canvas = document.createElement('canvas');
+                const ctx = canvas.getContext('2d', { willReadFrequently: true });
 
-            function updateCanvas() {
-                if (img.naturalWidth && img.naturalHeight) {
-                    canvas.width = img.naturalWidth;
-                    canvas.height = img.naturalHeight;
-                    ctx.drawImage(img, 0, 0);
-                }
-            }
+                const tempImg = new Image();
+                tempImg.crossOrigin = 'Anonymous';
+                tempImg.src = img.src;
 
-            if (img.complete) updateCanvas();
-            else img.onload = updateCanvas;
-
-            return { img, canvas, ctx };
-        });
-
-        mapaContainer.addEventListener('mousemove', (e) => {
-            const rect = mapaContainer.getBoundingClientRect();
-            const xRel = (e.clientX - rect.left) / rect.width;
-            const yRel = (e.clientY - rect.top) / rect.height;
-
-            currentHoveredImg = null;
-
-            for (let i = canvases.length - 1; i >= 0; i--) {
-                const { img, canvas, ctx } = canvases[i];
-                if (!canvas.width || !canvas.height) continue;
-
-                const posX = Math.floor(xRel * canvas.width);
-                const posY = Math.floor(yRel * canvas.height);
-
-                if (posX >= 0 && posX < canvas.width && posY >= 0 && posY < canvas.height) {
-                    const pixel = ctx.getImageData(posX, posY, 1, 1).data;
-                    if (pixel[3] > 30) {
-                        currentHoveredImg = img;
-                        break;
-                    }
-                }
-            }
-
-            regioes.forEach(img => {
-                if (img === currentHoveredImg) {
-                    img.classList.add('hovered');
-                } else {
-                    img.classList.remove('hovered');
-                }
+                tempImg.onload = () => {
+                    canvas.width = tempImg.naturalWidth;
+                    canvas.height = tempImg.naturalHeight;
+                    ctx.drawImage(tempImg, 0, 0);
+                    canvasData.set(link, { canvas, ctx });
+                };
             });
 
-            if (currentHoveredImg) {
-                mapaContainer.style.cursor = 'pointer';
-            } else {
-                mapaContainer.style.cursor = 'default';
-            }
-        });
+            // Verifica o pixel exato onde o mouse está passando
+            mapa.addEventListener('mousemove', (e) => {
+                const rect = mapa.getBoundingClientRect();
+                const mouseX = e.clientX - rect.left;
+                const mouseY = e.clientY - rect.top;
 
-        mapaContainer.addEventListener('mouseleave', () => {
-            regioes.forEach(img => img.classList.remove('hovered'));
-            currentHoveredImg = null;
-            mapaContainer.style.cursor = 'default';
-        });
+                for (let i = links.length - 1; i >= 0; i--) {
+                    const link = links[i];
+                    const data = canvasData.get(link);
 
-        mapaContainer.addEventListener('click', () => {
-            if (currentHoveredImg && currentHoveredImg.dataset.url) {
-                window.location.href = currentHoveredImg.dataset.url;
-            }
+                    if (!data) continue;
+
+                    const scaleX = data.canvas.width / rect.width;
+                    const scaleY = data.canvas.height / rect.height;
+
+                    const pixelX = Math.floor(mouseX * scaleX);
+                    const pixelY = Math.floor(mouseY * scaleY);
+
+                    const alpha = data.ctx.getImageData(pixelX, pixelY, 1, 1).data[3];
+
+                    // Se não for transparente (alpha > 10), ativa a região sob o cursor
+                    if (alpha > 10) {
+                        links.forEach(l => {
+                            l.classList.remove('active-hover');
+                            l.style.pointerEvents = 'none';
+                        });
+                        link.classList.add('active-hover');
+                        link.style.pointerEvents = 'auto';
+                        return;
+                    }
+                }
+
+                // Se estiver sobre área transparente de todas as camadas
+                links.forEach(l => {
+                    l.classList.remove('active-hover');
+                    l.style.pointerEvents = 'none';
+                });
+            });
         });
-    });
     </script>
 </body>
 </html>
