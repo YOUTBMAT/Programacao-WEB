@@ -3,12 +3,11 @@ body {
 }
 
 body.page-home{
-    background-color: rgb(8, 11, 26);
-}
+    background-color: rgb(8, 11, 26);}
 
-body.Greenpath-page{
-    background-color: #4ade80;
-}
+body.greenpath-page{
+    background-color: rgb(9, 27, 16);
+    --cor-borda: rgb(126, 157, 119);}
 
 @font-face {
     font-family: 'Trajan Original';
@@ -49,8 +48,8 @@ p {
     width: fit-content;
     margin: 0 auto;
     border-radius: 45px;
-    border: 3px solid #a855f7;
-    box-shadow: 0 0 20px #a855f7;
+    border: 3px solid var(--cor-borda, #a855f7);
+    box-shadow: 0 0 20px var(--cor-borda, #a855f7);
     overflow: hidden;
 }
 
@@ -91,4 +90,4 @@ p {
 .resting-grounds.active-hover { filter: drop-shadow(0 0 15px #f59e0b); }
 .kingdoms-edge.active-hover { filter: drop-shadow(0 0 15px #ffffff); }
 .the-hive.active-hover { filter: drop-shadow(0 0 15px #eab308); }
-.void.active-hover { filter: drop-shadow(0 0 15px #64748b); }
+.the-abyss.active-hover { filter: drop-shadow(0 0 15px #64748b); }
