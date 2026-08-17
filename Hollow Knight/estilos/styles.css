@@ -9,6 +9,11 @@ body.greenpath-page{
     background-color: rgb(9, 27, 16);
     --cor-borda: rgb(126, 157, 119);}
 
+body.ancient-basin-page{
+    background-color: rgb(9, 27, 16);
+    --cor-borda: rgb(126, 157, 119);
+}
+
 @font-face {
     font-family: 'Trajan Original';
     src: url('../fontes/Trajan Pro Regular.ttf') format('truetype');
