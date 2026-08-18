@@ -1,0 +1,58 @@
+body.greenpath-page {
+    background-color: rgb(9, 27, 16);
+    --cor-borda: rgb(126, 157, 119);
+    --cor-hover: #4ade80;
+}
+
+body.ancient-basin-page {
+    background-color: rgb(47, 47, 47);
+    --cor-borda: rgb(167, 167, 167);
+}
+
+
+.topico {
+    color: whitesmoke;
+    font-size: xx-large;
+    background-color: rgb(5, 6, 15);
+    border-radius: 15px;
+    padding: 12px 24px;
+    width: fit-content;
+    margin: 20px;
+}
+
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.card {
+    background-color: rgb(5, 6, 15);
+    padding: 5px;
+    width: 350px;
+    margin: 20px;
+    border-radius: 10px;
+}
+
+.card-image {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.image {
+    width: 100%;
+    transition: filter 0.3s ease, transform 0.3s ease;
+}
+
+.image:hover {
+    filter: drop-shadow(0 0 15px var(--cor-hover));
+    transform: scale(1.05);
+}
+
+.card-content {
+    padding: 10px;
+    margin: 5px;
+    color: whitesmoke;
+}
