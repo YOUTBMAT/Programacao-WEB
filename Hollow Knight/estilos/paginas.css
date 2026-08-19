@@ -32,6 +32,7 @@ body.ancient-basin-page {
     width: 350px;
     margin: 20px;
     border-radius: 10px;
+    box-shadow: 30px 30px 50px black inset;
 }
 
 .card-image {
@@ -55,4 +56,7 @@ body.ancient-basin-page {
     padding: 10px;
     margin: 5px;
     color: whitesmoke;
+    background-color: rgb(9, 10, 26);
+    border-radius: 10px;
+    box-shadow: 100px 100px 5000px black inset;
 }
