@@ -16,7 +16,7 @@
     <div class="mapa">
         <img src="./estilos/áreas/Mapa HK.jpg" class="mapa-base">
 
-        <a href="paginas//Dirtmouth/Dirtmouth.html" class="mapa-link dirtmouth">
+        <a href="paginas/Dirtmouth/Dirtmouth.html" class="mapa-link dirtmouth">
             <img src="./estilos/áreas/Dirtmouth.png" class="regiao">
         </a>
         <a href="paginas/Howling_Cliffs/Howling_Cliffs.html" class="mapa-link howling-cliffs">
@@ -66,69 +66,6 @@
         </a>
     </div>
 
-    <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            const mapa = document.querySelector('.mapa');
-            const links = Array.from(document.querySelectorAll('.mapa-link'));
-            const canvasData = new Map();
-
-            // Mapeia cada imagem para um canvas em memória para checar pixels
-            links.forEach(link => {
-                const img = link.querySelector('img');
-                const canvas = document.createElement('canvas');
-                const ctx = canvas.getContext('2d', { willReadFrequently: true });
-
-                const tempImg = new Image();
-                tempImg.crossOrigin = 'Anonymous';
-                tempImg.src = img.src;
-
-                tempImg.onload = () => {
-                    canvas.width = tempImg.naturalWidth;
-                    canvas.height = tempImg.naturalHeight;
-                    ctx.drawImage(tempImg, 0, 0);
-                    canvasData.set(link, { canvas, ctx });
-                };
-            });
-
-            // Verifica o pixel exato onde o mouse está passando
-            mapa.addEventListener('mousemove', (e) => {
-                const rect = mapa.getBoundingClientRect();
-                const mouseX = e.clientX - rect.left;
-                const mouseY = e.clientY - rect.top;
-
-                for (let i = links.length - 1; i >= 0; i--) {
-                    const link = links[i];
-                    const data = canvasData.get(link);
-
-                    if (!data) continue;
-
-                    const scaleX = data.canvas.width / rect.width;
-                    const scaleY = data.canvas.height / rect.height;
-
-                    const pixelX = Math.floor(mouseX * scaleX);
-                    const pixelY = Math.floor(mouseY * scaleY);
-
-                    const alpha = data.ctx.getImageData(pixelX, pixelY, 1, 1).data[3];
-
-                    // Se não for transparente (alpha > 10), ativa a região sob o cursor
-                    if (alpha > 10) {
-                        links.forEach(l => {
-                            l.classList.remove('active-hover');
-                            l.style.pointerEvents = 'none';
-                        });
-                        link.classList.add('active-hover');
-                        link.style.pointerEvents = 'auto';
-                        return;
-                    }
-                }
-
-                // Se estiver sobre área transparente de todas as camadas
-                links.forEach(l => {
-                    l.classList.remove('active-hover');
-                    l.style.pointerEvents = 'none';
-                });
-            });
-        });
-    </script>
+    <script src="./codigos/index.js"></script>
 </body>
 </html>
