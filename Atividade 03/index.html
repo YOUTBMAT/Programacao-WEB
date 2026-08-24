@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Atividade 03</title>
+  <link rel="stylesheet" href="./estilos/style.css">
+</head>
+<body>
+
+  <div class="caixa">
+    <h1>Atividade 03</h1>
+
+    <label>Valor 1:</label>
+    <input type="number" id="num1">
+
+    <label>Valor 2:</label>
+    <input type="number" id="num2">
+
+    <button onclick="verificarMaior()">Maior Valor</button>
+    <p id="resultado"></p>
+
+    <div class="calculadora">
+      <button onclick="somar()">Somar</button>
+      <button onclick="subtrair()">Subtrair</button>
+      <button onclick="multiplicar()">Multiplicar</button>
+      <button onclick="dividir()">Dividir</button>
+    </div>
+
+    <button class="btn-limpar" onclick="limpar()">Limpar Campos</button>
+  </div>
+
+  <script src="./codigos/script.js"></script>
+</body>
+</html>
