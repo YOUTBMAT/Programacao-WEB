@@ -1,0 +1,29 @@
+body{
+    background-color: aqua;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.inpt{
+    padding: 5px;
+    margin: 5px;
+}
+
+.btn{
+    padding: 5px;
+    border-radius: 5px;
+    border: 2px solid black;
+}
+
+.lbl{
+    color: black;
+    font-size: 24px;
+}
+
+.erro{
+    color: red;
+    font-size: 14px;
+    min-height: 18px;
+}

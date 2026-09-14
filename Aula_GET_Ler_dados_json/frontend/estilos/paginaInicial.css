@@ -1,0 +1,44 @@
+body{
+    background-color: rgb(159, 236, 255);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.container{
+    
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.tabela{
+    font-size: 50px;
+     background-color: white;
+    margin: 30px;
+}
+
+td, th{
+     border: 2px solid black;
+}
+
+th {
+    background-color: aqua;
+}
+
+.linhas {
+    background-color: rgb(218, 253, 218);
+}
+
+.tabela2{
+    background-color: white;
+    margin: 30px;
+    font-size: 60px;
+    padding: 20px;
+}
+
+.linhas2{
+    padding: 50px;
+}
