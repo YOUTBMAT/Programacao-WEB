@@ -2,11 +2,13 @@ body.greenpath-page {
     background-color: rgb(9, 27, 16);
     --cor-borda: rgb(126, 157, 119);
     --cor-hover: #4ade80;
+    background: linear-gradient(to bottom, rgb(9, 27, 16), rgb(0, 0, 0));
 }
 
 body.ancient-basin-page {
     background-color: rgb(47, 47, 47);
     --cor-borda: rgb(167, 167, 167);
+    background: linear-gradient(to bottom, rgb(47, 47, 47), rgb(0, 0, 0));
 }
 
 
