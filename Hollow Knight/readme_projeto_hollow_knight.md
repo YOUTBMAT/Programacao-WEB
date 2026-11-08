@@ -77,3 +77,29 @@ O objetivo principal deste projeto é oferecer aos fãs e leitores uma experiên
     ├── regioes/
     └── fontes/
 ```
+
+---
+
+## 🗃️ Trabalho CRUD (HTTP + PHP + MySQL) — "Acervo de Hallownest"
+
+Tela `crud.html` (link na página inicial) com tabela (GET), formulário (POST) e, em cada linha, **Atualizar (PUT)** e **Excluir (DELETE = soft delete)**. Após cada operação a tabela é recarregada com um novo GET.
+
+```text
+├── crud.html                # Tela do CRUD
+├── codigos/crud.js          # fetch: listar (GET), cadastrar (POST), atualizar (PUT), excluir (DELETE)
+├── codigos/imagens.js       # fallback das imagens da wiki
+├── estilos/crud.css
+└── backend/
+    ├── conexao.php          # PDO + CORS + preflight OPTIONS
+    ├── read.php  create.php  update.php  delete.php
+    └── database.sql         # CREATE TABLE + dados iniciais
+```
+
+**Como rodar**
+1. Importe `backend/database.sql` no MySQL (ele recria a tabela `hollow_knight_itens`).
+2. Ajuste usuário/senha em `backend/conexao.php` se necessário.
+3. `cd backend && php -S localhost:8000`
+4. Abra a pasta do projeto no Live Server (porta 5500) e acesse `crud.html`.
+
+**Atualizar (PUT):** os campos de cada linha são editáveis; o botão lê os valores daquela linha (pelo `id`) e envia o PUT.
+**Excluir (DELETE):** o PHP faz `UPDATE ... SET ativo = 0`; o GET só traz `ativo = 1`.

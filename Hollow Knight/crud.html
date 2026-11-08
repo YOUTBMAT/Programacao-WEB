@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Acervo de Hallownest - Hollow Knight</title>
+    <link rel="stylesheet" href="./estilos/index.css">
+    <link rel="stylesheet" href="./estilos/crud.css">
+</head>
+<body class="page-crud">
+
+    <a href="index.html" class="btn-voltar">
+        <h3>← Voltar ao Mapa</h3>
+    </a>
+
+    <div class="titulo">
+        <h1>ACERVO DE HALLOWNEST</h1>
+    </div>
+    <p class="subtitulo">Catálogo de regiões, habitantes e espíritos do reino de Hallownest. Cadastre, consulte, atualize e remova registros.</p>
+
+    <!-- CREATE (POST): campos + botão de cadastrar -->
+    <div class="painel" id="formulario">
+        <h2>Cadastrar novo registro</h2>
+        <div class="campos">
+            <label>Nome
+                <input type="text" id="nome" maxlength="100" placeholder="Ex.: Elderbug">
+            </label>
+            <label>Região
+                <input type="text" id="regiao" list="listaRegioes" maxlength="100" placeholder="Ex.: Dirtmouth">
+            </label>
+            <label>Tipo
+                <select id="tipo">
+                    <option value="NPC">NPC</option>
+                    <option value="Espírito">Espírito</option>
+                    <option value="Região">Região</option>
+                    <option value="Lore">Lore</option>
+                </select>
+            </label>
+            <label>URL da imagem (opcional)
+                <input type="url" id="imagem_url" maxlength="500" placeholder="https://...">
+            </label>
+            <label class="largo">Descrição
+                <textarea id="descricao" rows="3" placeholder="Conte quem é ou o que é este registro"></textarea>
+            </label>
+        </div>
+        <button type="button" id="btnCadastrar" class="botao botao-cadastrar">Cadastrar</button>
+    </div>
+
+    <datalist id="listaRegioes">
+        <option value="Dirtmouth">
+        <option value="Howling Cliffs">
+        <option value="Forgotten Crossroads">
+        <option value="Greenpath">
+        <option value="Fog Canyon">
+        <option value="Fungal Wastes">
+        <option value="Queen's Gardens">
+        <option value="Deepnest">
+        <option value="Ancient Basin">
+        <option value="City of Tears">
+        <option value="Royal Waterways">
+        <option value="Crystal Peak">
+        <option value="Resting Grounds">
+        <option value="Kingdom's Edge">
+        <option value="The Hive">
+        <option value="The Abyss">
+    </datalist>
+
+    <div id="mensagem" role="status" aria-live="polite"></div>
+
+    <!-- READ (GET): tabela montada pelo JavaScript -->
+    <div class="tabela-wrap">
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Imagem</th>
+                    <th>Nome</th>
+                    <th>Região</th>
+                    <th>Tipo</th>
+                    <th>Descrição</th>
+                    <th>Ações</th>
+                </tr>
+            </thead>
+            <tbody id="corpoTabela"></tbody>
+        </table>
+    </div>
+
+    <script src="./codigos/imagens.js"></script>
+    <script src="./codigos/crud.js"></script>
+</body>
+</html>

@@ -123,3 +123,27 @@ p {
 .kingdoms-edge.active-hover { filter: drop-shadow(0 0 15px #ffffff); }
 .the-hive.active-hover { filter: drop-shadow(0 0 15px #eab308); }
 .the-abyss.active-hover { filter: drop-shadow(0 0 15px #64748b); }
+
+/* Botão que leva ao acervo (CRUD) */
+.btn-crud {
+    display: block;
+    width: fit-content;
+    margin: 0 auto 10px auto;
+    padding: 10px 26px;
+    font-family: 'Trajan Original', serif;
+    font-size: 0.95rem;
+    letter-spacing: 1px;
+    color: #f8fafc;
+    text-decoration: none;
+    background: linear-gradient(135deg, rgb(10, 13, 28) 0%, rgb(5, 6, 15) 100%);
+    border: 2px solid rgba(168, 85, 247, 0.6);
+    border-radius: 30px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5), inset 0 0 12px rgba(168, 85, 247, 0.15);
+    transition: all 0.3s ease;
+}
+
+.btn-crud:hover {
+    background: #a855f7;
+    color: #000;
+    box-shadow: 0 0 20px #a855f7;
+}
