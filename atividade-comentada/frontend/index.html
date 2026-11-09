@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mural da Turma — Atividade de comentários</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="card">
+    <h1>Mural da Turma</h1>
+    <p class="sub">Um CRUD simples (frontend + backend + banco). Sua tarefa é
+      <strong>comentar o máximo possível do código</strong>, no frontend e no backend.</p>
+
+    <div class="form">
+      <input id="autor" type="text" placeholder="Seu nome" maxlength="80">
+      <input id="mensagem" type="text" placeholder="Seu recado" maxlength="255">
+      <button id="btnEnviar">Enviar</button>
+    </div>
+
+    <table>
+      <thead>
+        <tr><th>Autor</th><th>Mensagem</th><th></th></tr>
+      </thead>
+      <tbody id="lista"></tbody>
+    </table>
+  </main>
+
+  <!-- O app.js é quem conversa com o backend -->
+  <script src="app.js"></script>
+</body>
+</html>

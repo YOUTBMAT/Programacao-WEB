@@ -1,0 +1,83 @@
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 40px 16px;
+  background: #0d1b2a;
+  font-family: Calibri, "Segoe UI", Arial, sans-serif;
+  color: #13293d;
+}
+
+.card {
+  background: #ffffff;
+  width: 560px;
+  max-width: 100%;
+  padding: 28px 30px 34px;
+  border-radius: 14px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, .35);
+}
+
+h1 {
+  margin: 0 0 4px;
+  font-family: Cambria, Georgia, serif;
+  color: #1c7293;
+}
+
+.sub {
+  font-size: 14px;
+  color: #5b7083;
+  margin: 0 0 20px;
+}
+
+.form {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-bottom: 22px;
+}
+
+input {
+  flex: 1 1 140px;
+  padding: 10px 12px;
+  border: 1px solid #c4ced8;
+  border-radius: 8px;
+  font-size: 15px;
+}
+
+input:focus { outline: none; border-color: #1c7293; }
+
+button {
+  padding: 10px 18px;
+  border: none;
+  border-radius: 8px;
+  background: #1c7293;
+  color: #fff;
+  font-size: 15px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+button:hover { background: #155b77; }
+
+table { width: 100%; border-collapse: collapse; }
+
+th, td {
+  text-align: left;
+  padding: 10px 8px;
+  border-bottom: 1px solid #e2e8f0;
+  font-size: 14px;
+}
+
+th { color: #5b7083; font-size: 12px; text-transform: uppercase; letter-spacing: .5px; }
+
+td button {
+  padding: 5px 12px;
+  font-size: 13px;
+  background: #d9534f;
+}
+
+td button:hover { background: #b4472e; }
