@@ -44,8 +44,7 @@ try {
     http_response_code(500);
     echo json_encode([
         "sucesso" => false,
-        "mensagem" => "Erro interno ao conectar ao banco de dados.",
-        "detalhe" => $e->getMessage()
+        "mensagem" => "Erro interno ao conectar ao banco de dados."
     ]);
     exit();
 }

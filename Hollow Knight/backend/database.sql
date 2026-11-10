@@ -1,9 +1,3 @@
--- ============================================================
---  Trabalho CRUD (HTTP + PHP + MySQL) - Acervo de Hallownest
---  Tema: catálogo de regiões, habitantes (NPCs) e espíritos do
---  universo de Hollow Knight (conteúdo de lore, sem combate).
--- ============================================================
-
 CREATE DATABASE IF NOT EXISTS hollow_knight_db CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
 
 USE hollow_knight_db;
@@ -14,11 +8,11 @@ DROP TABLE IF EXISTS hollow_knight_itens;
 CREATE TABLE hollow_knight_itens (
     id         INT AUTO_INCREMENT PRIMARY KEY,
     nome       VARCHAR(100) NOT NULL,
-    regiao     VARCHAR(100) NOT NULL,          -- Ex: 'Greenpath', 'Deepnest'
-    tipo       VARCHAR(50)  NOT NULL,          -- 'Região', 'NPC', 'Espírito' ou 'Lore'
+    regiao     VARCHAR(100) NOT NULL,     
+    tipo       VARCHAR(50)  NOT NULL,        
     descricao  TEXT         NOT NULL,
     imagem_url VARCHAR(500) NOT NULL DEFAULT '',
-    ativo      TINYINT      NOT NULL DEFAULT 1 -- 1 = ativo | 0 = excluído (soft delete)
+    ativo      TINYINT      NOT NULL DEFAULT 1 
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- Dados iniciais (regiões + habitantes de cada região)

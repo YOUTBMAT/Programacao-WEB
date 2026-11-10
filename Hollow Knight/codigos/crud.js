@@ -1,16 +1,9 @@
-// ============================================================
-//  CRUD do Acervo de Hallownest
-//  GET (listar) | POST (cadastrar) | PUT (atualizar) | DELETE (excluir)
-//  O backend PHP roda em localhost:8000 e responde sempre em JSON.
-// ============================================================
-
 const API = window.location.port === "3000" ? "/backend" : "http://localhost:8000";
 const TIPOS = ["NPC", "Espírito", "Região", "Lore"];
 
 const corpoTabela = document.getElementById("corpoTabela");
 const divMensagem = document.getElementById("mensagem");
 
-// ---------- utilidades ----------
 
 // Mostra uma mensagem de sucesso (verde) ou de erro (vermelha)
 function mostrarMensagem(texto, erro = false) {
